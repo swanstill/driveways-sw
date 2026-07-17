@@ -124,8 +124,8 @@ export default function Testimonials() {
           {/* Bark.com badge */}
           <div className="mt-6 inline-flex items-center gap-3 rounded-full bg-white border border-gray-200 px-5 py-2.5 shadow-sm">
             <img
-              src="https://d1k8hez1mxkuxw.cloudfront.net/s/avatar_v2/3jLjLo/logo/62fccec21843e.jpg"
-              alt="Driveway Southwest on Bark.com"
+              src="/bark-icon.png"
+              alt="Bark.com"
               className="h-8 w-8 rounded-full object-cover"
             />
             <div className="flex gap-0.5">
@@ -148,7 +148,10 @@ export default function Testimonials() {
               key={`${t.name}-${t.date}`}
               className="rounded-2xl bg-white p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-shadow flex flex-col"
             >
-              <StarRating rating={t.rating} />
+              <div className="flex items-center gap-2">
+                <StarRating rating={t.rating} />
+                <img src="/bark-icon.png" alt="Bark.com" className="h-4 w-4 rounded-sm" />
+              </div>
               <blockquote className="mt-5 text-text leading-relaxed flex-1">
                 &ldquo;{t.text}&rdquo;
               </blockquote>
@@ -177,7 +180,10 @@ export default function Testimonials() {
               key={`${t.name}-${t.date}`}
               className="rounded-xl bg-white p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
             >
-              <StarRating rating={t.rating} />
+              <div className="flex items-center gap-2">
+                <StarRating rating={t.rating} />
+                <img src="/bark-icon.png" alt="Bark.com" className="h-3.5 w-3.5 rounded-sm" />
+              </div>
               <blockquote className="mt-4 text-sm text-text leading-relaxed">
                 &ldquo;{t.text}&rdquo;
               </blockquote>
