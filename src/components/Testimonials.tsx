@@ -123,6 +123,11 @@ export default function Testimonials() {
           </p>
           {/* Bark.com badge */}
           <div className="mt-6 inline-flex items-center gap-3 rounded-full bg-white border border-gray-200 px-5 py-2.5 shadow-sm">
+            <img
+              src="https://d1k8hez1mxkuxw.cloudfront.net/s/avatar_v2/3jLjLo/logo/62fccec21843e.jpg"
+              alt="Driveway Southwest on Bark.com"
+              className="h-8 w-8 rounded-full object-cover"
+            />
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <svg key={i} className="h-4 w-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
