@@ -16,12 +16,12 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <QuoteForm />
+        <Testimonials />
         <Services />
         <WhyChooseUs />
         <Gallery />
         <Areas />
-        <QuoteForm />
-        <Testimonials />
         <ContactBanner />
       </main>
       <Footer />

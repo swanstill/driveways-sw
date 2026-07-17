@@ -148,10 +148,7 @@ export default function Testimonials() {
               key={`${t.name}-${t.date}`}
               className="rounded-2xl bg-white p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-shadow flex flex-col"
             >
-              <div className="flex items-center gap-2">
-                <StarRating rating={t.rating} />
-                <img src="/bark-icon.png" alt="Bark.com" className="h-4 w-4 rounded-sm" />
-              </div>
+              <StarRating rating={t.rating} />
               <blockquote className="mt-5 text-text leading-relaxed flex-1">
                 &ldquo;{t.text}&rdquo;
               </blockquote>
@@ -167,7 +164,7 @@ export default function Testimonials() {
                     )}
                   </div>
                 </div>
-                <span className="text-xs text-text-light">{t.date}</span>
+                <img src="/bark-icon.png" alt="Bark.com" className="h-5 w-5 rounded-sm" />
               </div>
             </div>
           ))}
@@ -180,10 +177,7 @@ export default function Testimonials() {
               key={`${t.name}-${t.date}`}
               className="rounded-xl bg-white p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
             >
-              <div className="flex items-center gap-2">
-                <StarRating rating={t.rating} />
-                <img src="/bark-icon.png" alt="Bark.com" className="h-3.5 w-3.5 rounded-sm" />
-              </div>
+              <StarRating rating={t.rating} />
               <blockquote className="mt-4 text-sm text-text leading-relaxed">
                 &ldquo;{t.text}&rdquo;
               </blockquote>
@@ -199,7 +193,7 @@ export default function Testimonials() {
                     )}
                   </div>
                 </div>
-                <span className="text-[10px] text-text-light">{t.date}</span>
+                <img src="/bark-icon.png" alt="Bark.com" className="h-4 w-4 rounded-sm" />
               </div>
             </div>
           ))}
