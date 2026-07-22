@@ -182,23 +182,14 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="https://www.bark.com/en/gb/b/driveway-southwest-ltd/40bQQ/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-xl bg-white border border-gray-200 shadow-sm px-4 py-3 hover:shadow-md transition-all"
+                href="#quote"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-xl bg-accent px-4 py-3 text-sm font-bold text-white shadow-md hover:bg-accent-dark transition-all hover:shadow-lg"
               >
-                <img src="/bark-icon.png" alt="Bark" className="h-6 w-6 rounded-full" />
-                <div className="flex items-center gap-2">
-                  <span className="text-base font-bold text-gray-900">Rated 5.0</span>
-                  <div className="flex gap-px">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="h-4 w-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <span className="text-xs text-gray-500 font-medium">based on 12 reviews</span>
-                </div>
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M12 3c-1.268 0-2.39.61-3.102 1.554A10.48 10.48 0 0012 3.75c-2.102 0-4.062.618-5.688 1.678A7.25 7.25 0 0112 5.25c1.53 0 2.968.468 4.152 1.274C14.826 5.624 13.236 4.97 11.5 4.97c-1.482 0-2.87.447-4.02 1.208A7.237 7.237 0 0112 5.25c1.99 0 3.8.802 5.115 2.1A7.751 7.751 0 0112 5.25c2.24 0 4.26.942 5.688 2.453A8.25 8.25 0 0112 3.51z" />
+                </svg>
+                Get a Free Quote
               </a>
               <a
                 href="tel:+447932339271"
