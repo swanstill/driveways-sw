@@ -25,7 +25,7 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 mb-6">
               <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
               <span className="text-sm font-medium text-white/90">
-                Family-Owned &bull; Fully Insured &bull; Guaranteed Work
+                Fully Insured &bull; Guaranteed Work
               </span>
             </div>
 

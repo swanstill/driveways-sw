@@ -113,7 +113,7 @@ export default function Header() {
                       </svg>
                     ))}
                   </div>
-                  <span className="text-xs text-gray-500 font-medium">based on 50 reviews</span>
+                  <span className="text-xs text-gray-500 font-medium">based on 12 reviews</span>
                 </div>
               </a>
               <div className="h-5 w-px bg-gray-200" />
@@ -197,7 +197,7 @@ export default function Header() {
                       </svg>
                     ))}
                   </div>
-                  <span className="text-xs text-gray-500 font-medium">based on 50 reviews</span>
+                  <span className="text-xs text-gray-500 font-medium">based on 12 reviews</span>
                 </div>
               </a>
               <a

@@ -95,7 +95,7 @@ export default function Testimonials() {
             </div>
             <span className="text-sm font-semibold text-text">5.0</span>
             <span className="text-sm text-text-light">•</span>
-            <span className="text-sm text-text-light">6 Reviews on Bark.com</span>
+            <span className="text-sm text-text-light">12 Reviews on Bark.com</span>
           </div>
         </div>
 
