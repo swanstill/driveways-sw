@@ -16,31 +16,31 @@ const STEPS = [
 ] as const;
 
 const propertyTypes = [
-  { value: "Detached House", icon: "🏡" },
-  { value: "Semi-Detached House", icon: "🏠" },
-  { value: "Terraced House", icon: "🏘️" },
-  { value: "Bungalow", icon: "🏚️" },
-  { value: "Cottage", icon: "🛖" },
-  { value: "Flat / Apartment", icon: "🏢" },
-  { value: "Commercial Property", icon: "🏛️" },
-  { value: "Other", icon: "📋" },
+  { value: "Detached House", icon: "/icons/Detached.png" },
+  { value: "Semi-Detached House", icon: "/icons/semi-detached.png" },
+  { value: "Terraced House", icon: "/icons/Terraced.png" },
+  { value: "Bungalow", icon: "/icons/Bungalow.png" },
+  { value: "Cottage", icon: "/icons/Cottage.png" },
+  { value: "Flat / Apartment", icon: "/icons/Flat.png" },
+  { value: "Commercial Property", icon: "/icons/Commercial-Building.png" },
+  { value: "Other", icon: "/icons/Others.png" },
 ];
 
 const services = [
-  { value: "block-paving", label: "Block Paving", icon: "🧱" },
-  { value: "resin-driveway", label: "Resin Driveway", icon: "💎" },
-  { value: "tarmac-driveway", label: "Tarmac Driveway", icon: "🛤️" },
-  { value: "gravel-driveway", label: "Gravel Driveway", icon: "🪨" },
-  { value: "patio", label: "Patio", icon: "🏠" },
-  { value: "driveway-repair", label: "Driveway Repair", icon: "🔧" },
-  { value: "other", label: "Other", icon: "📋" },
+  { value: "block-paving", label: "Block Paving" },
+  { value: "resin-driveway", label: "Resin Driveway" },
+  { value: "tarmac-driveway", label: "Tarmac Driveway" },
+  { value: "gravel-driveway", label: "Gravel Driveway" },
+  { value: "patio", label: "Patio" },
+  { value: "driveway-repair", label: "Driveway Repair" },
+  { value: "other", label: "Other" },
 ];
 
 const timescales = [
-  { value: "asap", label: "ASAP", desc: "As soon as possible", icon: "⚡" },
-  { value: "this-month", label: "This Month", desc: "Within the current month", icon: "📅" },
-  { value: "1-3-months", label: "1–3 Months", desc: "Flexible timeline", icon: "🗓️" },
-  { value: "researching", label: "Just Researching", desc: "No rush, just exploring options", icon: "🔍" },
+  { value: "asap", label: "ASAP", desc: "As soon as possible", icon: "/icons/Detached.png" },
+  { value: "this-month", label: "This Month", desc: "Within the current month", icon: "/icons/Flat.png" },
+  { value: "1-3-months", label: "1–3 Months", desc: "Flexible timeline", icon: "/icons/Cottage.png" },
+  { value: "researching", label: "Just Researching", desc: "No rush, just exploring options", icon: "/icons/Bungalow.png" },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -144,8 +144,8 @@ export default function QuoteForm() {
             </p>
             <p className="mt-2 text-sm text-text-light">
               Prefer to talk now?{" "}
-              <a href="tel:+447940959225" className="font-semibold text-primary underline">
-                Call 07940 959 225
+              <a href="tel:+447932339271" className="font-semibold text-primary underline">
+                Call 07932 339 271
               </a>
             </p>
           </div>
@@ -176,22 +176,22 @@ export default function QuoteForm() {
         {/* Form Card — Landscape layout */}
         <div className="rounded-3xl bg-white shadow-2xl overflow-hidden flex flex-col lg:flex-row">
           {/* Left: Progress Sidebar */}
-          <div className="lg:w-64 bg-gray-50 p-6 lg:p-8 border-b lg:border-b-0 lg:border-r border-gray-100">
-            <div className="flex lg:flex-col items-center lg:items-start gap-0 lg:gap-0">
+          <div className="lg:w-64 bg-gray-50 p-4 sm:p-6 lg:p-8 border-b lg:border-b-0 lg:border-r border-gray-100">
+            <div className="flex lg:flex-col items-center lg:items-start gap-0 lg:gap-4 overflow-x-auto justify-center">
               {STEPS.map((s, i) => (
                 <div key={s.id} className="flex items-center lg:items-start">
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2 lg:gap-3">
                     <div
-                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-all duration-300 ${
+                      className={`flex h-7 w-7 lg:h-9 lg:w-9 shrink-0 items-center justify-center rounded-full text-xs lg:text-sm font-bold transition-all duration-300 ${
                         step > s.id
                           ? "bg-primary text-white"
                           : step === s.id
-                            ? "bg-primary text-white ring-4 ring-primary/20"
+                            ? "bg-primary text-white ring-2 lg:ring-4 ring-primary/20"
                             : "bg-gray-200 text-gray-400"
                       }`}
                     >
                       {step > s.id ? (
-                        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                        <svg className="h-3.5 w-3.5 lg:h-4 lg:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                         </svg>
                       ) : (
@@ -216,7 +216,7 @@ export default function QuoteForm() {
                   {/* Horizontal connector (mobile) */}
                   {i < STEPS.length - 1 && (
                     <div
-                      className={`lg:hidden h-0.5 w-6 sm:w-8 mx-1 rounded transition-colors duration-300 ${
+                      className={`lg:hidden h-0.5 w-3 sm:w-4 mx-0.5 lg:mx-1 rounded transition-colors duration-300 ${
                         step > s.id ? "bg-primary" : "bg-gray-200"
                       }`}
                     />
@@ -239,10 +239,10 @@ export default function QuoteForm() {
               {/* -------- Step 1: Property Type -------- */}
               {step === 1 && (
                 <div className="animate-fade-in-up">
-                  <h3 className="text-xl font-bold text-text mb-2">
+                  <h3 className="text-xl font-bold text-text mb-2 text-center lg:text-left">
                     What type of property?
                   </h3>
-                  <p className="text-sm text-text-light mb-6">
+                  <p className="text-sm text-text-light mb-6 text-center lg:text-left">
                     Select the option that best describes your property.
                   </p>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -257,7 +257,15 @@ export default function QuoteForm() {
                             : "border-gray-200 hover:border-primary/40"
                         }`}
                       >
-                        <span className="text-2xl">{type.icon}</span>
+                        {type.icon.startsWith("/") ? (
+                          <img
+                            src={type.icon}
+                            alt={type.value}
+                            className="h-8 w-8 object-contain"
+                          />
+                        ) : (
+                          <span className="text-2xl">{type.icon}</span>
+                        )}
                         <span
                           className={`text-sm font-medium ${
                             formData.propertyType === type.value ? "text-primary" : "text-text"
@@ -277,10 +285,10 @@ export default function QuoteForm() {
               {/* -------- Step 2: Service -------- */}
               {step === 2 && (
                 <div className="animate-fade-in-up">
-                  <h3 className="text-xl font-bold text-text mb-2">
+                  <h3 className="text-xl font-bold text-text mb-2 text-center lg:text-left">
                     What service do you need?
                   </h3>
-                  <p className="text-sm text-text-light mb-6">
+                  <p className="text-sm text-text-light mb-6 text-center lg:text-left">
                     Choose the service that best matches your project.
                   </p>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -295,7 +303,6 @@ export default function QuoteForm() {
                             : "border-gray-200 hover:border-primary/40"
                         }`}
                       >
-                        <span className="text-2xl">{svc.icon}</span>
                         <span
                           className={`text-sm font-medium ${
                             formData.service === svc.value ? "text-primary" : "text-text"
@@ -315,10 +322,10 @@ export default function QuoteForm() {
               {/* -------- Step 3: Timescale -------- */}
               {step === 3 && (
                 <div className="animate-fade-in-up">
-                  <h3 className="text-xl font-bold text-text mb-2">
+                  <h3 className="text-xl font-bold text-text mb-2 text-center lg:text-left">
                     When would you like to start?
                   </h3>
-                  <p className="text-sm text-text-light mb-6">
+                  <p className="text-sm text-text-light mb-6 text-center lg:text-left">
                     This helps us prioritise your project.
                   </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -333,7 +340,15 @@ export default function QuoteForm() {
                             : "border-gray-200 hover:border-primary/40"
                         }`}
                       >
-                        <span className="text-2xl shrink-0">{ts.icon}</span>
+                        {typeof ts.icon === "string" && ts.icon.startsWith("/") ? (
+                          <img
+                            src={ts.icon}
+                            alt={ts.label}
+                            className="h-8 w-8 object-contain brightness-0 invert sepia saturate-[10] hue-rotate-[80deg] shrink-0"
+                          />
+                        ) : (
+                          <span className="text-2xl shrink-0">{ts.icon}</span>
+                        )}
                         <div>
                           <span
                             className={`block text-sm font-bold ${
@@ -358,10 +373,10 @@ export default function QuoteForm() {
               {/* -------- Step 4: Postcode -------- */}
               {step === 4 && (
                 <div className="animate-fade-in-up">
-                  <h3 className="text-xl font-bold text-text mb-2">
+                  <h3 className="text-xl font-bold text-text mb-2 text-center lg:text-left">
                     What&apos;s your postcode?
                   </h3>
-                  <p className="text-sm text-text-light mb-6">
+                  <p className="text-sm text-text-light mb-6 text-center lg:text-left">
                     We use this to check we cover your area and provide an accurate quote.
                   </p>
                   <input
@@ -386,10 +401,10 @@ export default function QuoteForm() {
               {/* -------- Step 5: Name -------- */}
               {step === 5 && (
                 <div className="animate-fade-in-up">
-                  <h3 className="text-xl font-bold text-text mb-2">
+                  <h3 className="text-xl font-bold text-text mb-2 text-center lg:text-left">
                     What&apos;s your name?
                   </h3>
-                  <p className="text-sm text-text-light mb-6">
+                  <p className="text-sm text-text-light mb-6 text-center lg:text-left">
                     So we can personalise your quote and get in touch.
                   </p>
                   <input
@@ -414,10 +429,10 @@ export default function QuoteForm() {
               {/* -------- Step 6: Phone -------- */}
               {step === 6 && (
                 <div className="animate-fade-in-up">
-                  <h3 className="text-xl font-bold text-text mb-2">
+                  <h3 className="text-xl font-bold text-text mb-2 text-center lg:text-left">
                     What&apos;s your phone number?
                   </h3>
-                  <p className="text-sm text-text-light mb-6">
+                  <p className="text-sm text-text-light mb-6 text-center lg:text-left">
                     We&apos;ll only use this to contact you about your quote.
                   </p>
                   <div className="relative max-w-md">
@@ -426,7 +441,7 @@ export default function QuoteForm() {
                     </span>
                     <input
                       type="tel"
-                      placeholder="7940 959 225"
+                      placeholder="7932 339 271"
                       value={formData.phone}
                       onChange={(e) => update("phone", e.target.value)}
                       onKeyDown={handleKeyDown}

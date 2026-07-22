@@ -41,48 +41,6 @@ const testimonials = [
     rating: 5,
     text: "Excellent Fence Installation. The crew was on time, efficient, and the quality of the fence is outstanding. It has transformed the look of our property.",
   },
-  {
-    name: "Riley",
-    date: "31 March 2025",
-    service: "Fencing",
-    rating: 5,
-    text: "Reliable & Beautiful Fence Work! Our new fence not only looks great but is sturdy and secure. Great craftsmanship and excellent customer service!",
-  },
-  {
-    name: "Jay Long",
-    date: "29 March 2025",
-    service: "Gate Installation",
-    rating: 5,
-    text: "Perfect Gate Setup! From design to installation, the gate looks exactly as we envisioned. Professional and quick service. Couldn't be happier!",
-  },
-  {
-    name: "Taylor Coles",
-    date: "28 March 2025",
-    service: "Fence Installation",
-    rating: 5,
-    text: "Stunning Fence Installation! The team did an incredible job installing our new fence. It looks fantastic and really enhances the privacy of our garden.",
-  },
-  {
-    name: "Anthony Mann",
-    date: "3 July 2024",
-    service: "Landscaping",
-    rating: 5,
-    text: "Did all I required in their quote.",
-  },
-  {
-    name: "Brenda Good",
-    date: "21 April 2024",
-    service: "Landscaping",
-    rating: 5,
-    text: "Excellent, recommend! Guys were quick and pleasant. Very pleased with the job they did.",
-  },
-  {
-    name: "Brenda Good",
-    date: "19 April 2024",
-    service: "Landscaping",
-    rating: 5,
-    text: "Very pleased, they did an excellent job. I would recommend them. Also, I would like to rate the guys who did the work — very hardworking, very pleasant. Would highly rate them.",
-  },
 ];
 
 function StarRating({ rating }: { rating: number }) {
@@ -137,7 +95,7 @@ export default function Testimonials() {
             </div>
             <span className="text-sm font-semibold text-text">5.0</span>
             <span className="text-sm text-text-light">•</span>
-            <span className="text-sm text-text-light">12 Reviews on Bark.com</span>
+            <span className="text-sm text-text-light">6 Reviews on Bark.com</span>
           </div>
         </div>
 

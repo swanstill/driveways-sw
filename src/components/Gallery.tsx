@@ -4,8 +4,8 @@ const gallery = [
   { src: "/images/472314961_535985259396224_1222598253678749779_n.jpg", alt: "Block paving driveway project completed by Driveways South West" },
   { src: "/images/487743582_600049572989792_361623904499775130_n.jpg", alt: "Resin bound driveway installation in South West England" },
   { src: "/images/472314393_535985249396225_7014460572438640517_n.jpg", alt: "New driveway transformation by Driveways South West" },
-  { src: "/images/Instagram post - 25.png", alt: "Completed patio and path project" },
-  { src: "/images/Instagram post - 25 (1).png", alt: "Fencing and landscaping work" },
+  { src: "/images/project-4.webp", alt: "Completed patio and path project" },
+  { src: "/images/project-5.webp", alt: "Fencing and landscaping work" },
   { src: "/images/website-image-19.jpg", alt: "Driveway installation in progress" },
 ];
 

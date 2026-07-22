@@ -60,7 +60,7 @@ export default function RootLayout({
     name: "Driveways South West",
     image: "/images/Driveways-Southwest-Logo.png",
     url: "https://driveways-sw.co.uk",
-    telephone: "+447940959225",
+    telephone: "+447932339271",
     description:
       "Professional driveway, patio, path and fencing services in Midlands and South West England.",
     address: {
@@ -111,12 +111,20 @@ export default function RootLayout({
   return (
     <html lang="en-GB">
       <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KC98QTH9');`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} font-sans antialiased pt-[134px] lg:pt-[125px]`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KC98QTH9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         {children}
       </body>
     </html>
