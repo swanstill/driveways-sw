@@ -18,9 +18,9 @@ export default function Home() {
         <Hero />
         <QuoteForm />
         <Testimonials />
+        <Gallery />
         <Services />
         <WhyChooseUs />
-        <Gallery />
         <Areas />
         <ContactBanner />
       </main>
