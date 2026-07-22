@@ -111,6 +111,7 @@ export default function RootLayout({
   return (
     <html lang="en-GB">
       <head>
+        <link rel="icon" href="/favicon.jpg" type="image/jpeg" />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
