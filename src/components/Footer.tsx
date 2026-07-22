@@ -125,14 +125,12 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Driveways South West. All rights
             reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">
-              Privacy Policy
+          <p className="text-xs text-gray-500">
+            Website design with &hearts; by{" "}
+            <a href="https://www.tradesgrow.co.uk/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
+              Trades Grow
             </a>
-            <a href="#" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">
-              Terms &amp; Conditions
-            </a>
-          </div>
+          </p>
         </div>
       </div>
     </footer>
