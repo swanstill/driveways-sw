@@ -34,7 +34,7 @@ export default function Gallery() {
                 i === 0 ? "md:col-span-2 md:row-span-2" : ""
               }`}
             >
-              <div className={`relative ${i === 0 ? "h-64 md:h-full" : "h-48 md:h-56"}`}>
+              <div className={`relative ${i === 0 ? "h-48 md:h-full" : "h-48 md:h-56"}`}>
                 <Image
                   src={img.src}
                   alt={img.alt}
