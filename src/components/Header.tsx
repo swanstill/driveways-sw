@@ -133,7 +133,7 @@ export default function Header() {
               href="https://www.bark.com/en/gb/b/driveway-southwest-ltd/40bQQ/"
               target="_blank"
               rel="noopener noreferrer"
-              className="md:hidden flex flex-col items-center justify-center rounded-lg bg-white border border-gray-200 shadow-sm px-3 h-[36px]"
+              className="md:hidden flex flex-col items-center justify-center rounded-lg bg-white border border-gray-200 shadow-sm px-1.5 h-[36px]"
             >
               <div className="flex items-center gap-1">
                 <img src="/bark-icon.png" alt="Bark" className="h-3 w-3 rounded-full flex-shrink-0" />
