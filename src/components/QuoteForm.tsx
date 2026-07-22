@@ -58,6 +58,8 @@ export default function QuoteForm() {
     phone: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const update = (field: string, value: string) => {
@@ -117,10 +119,24 @@ export default function QuoteForm() {
     if (step > 1) setStep(step - 1);
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (step === 6 && validate()) {
-      setSubmitted(true);
+      setSubmitting(true);
+      setSubmitError("");
+      try {
+        const res = await fetch("/api/quote", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+        if (!res.ok) throw new Error("Failed to send");
+        setSubmitted(true);
+      } catch {
+        setSubmitError("Something went wrong. Please try again or call us directly.");
+      } finally {
+        setSubmitting(false);
+      }
     }
   };
 
@@ -480,13 +496,29 @@ export default function QuoteForm() {
                 {step === 6 && (
                   <button
                     type="submit"
-                    className="flex items-center gap-2 rounded-xl bg-accent px-8 py-3 text-sm font-bold text-white shadow-md hover:bg-accent-dark transition-all hover:shadow-lg"
+                    disabled={submitting}
+                    className="flex items-center gap-2 rounded-xl bg-accent px-8 py-3 text-sm font-bold text-white shadow-md hover:bg-accent-dark transition-all hover:shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Submit Quote Request
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
+                    {submitting ? (
+                      <>
+                        <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Submit Quote Request
+                        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+                      </>
+                    )}
                   </button>
+                )}
+                {submitError && (
+                  <p className="mt-4 text-sm text-red-500 text-center">{submitError}</p>
                 )}
               </div>
             </form>
