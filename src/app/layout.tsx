@@ -125,7 +125,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} font-sans antialiased pt-[134px] lg:pt-[125px]`}>
         {/* Google Tag Manager (noscript) */}
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KC98QTH9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KC98QTH9" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
         {children}
       </body>
     </html>
