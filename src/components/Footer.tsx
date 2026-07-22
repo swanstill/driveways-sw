@@ -126,7 +126,7 @@ export default function Footer() {
             reserved.
           </p>
           <p className="text-xs text-gray-500">
-            Website design with &hearts; by{" "}
+            Website design with <span className="text-red-500">&hearts;</span> by{" "}
             <a href="https://www.tradesgrow.co.uk/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
               Trades Grow
             </a>
