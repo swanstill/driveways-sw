@@ -133,11 +133,13 @@ export default function Header() {
               href="https://www.bark.com/en/gb/b/driveway-southwest-ltd/40bQQ/"
               target="_blank"
               rel="noopener noreferrer"
-              className="md:hidden flex items-center gap-1 rounded-lg bg-white border border-gray-200 shadow-sm px-2.5 h-[36px]"
+              className="md:hidden flex flex-col items-center justify-center rounded-lg bg-white border border-gray-200 shadow-sm px-3 h-[36px]"
             >
-              <img src="/bark-icon.png" alt="Bark" className="h-3 w-3 rounded-full flex-shrink-0" />
-              <span className="text-[10px] font-semibold text-text whitespace-nowrap">Rated 5.0</span>
-              <span className="text-[10px] text-text-light whitespace-nowrap">Based on 12 Reviews</span>
+              <div className="flex items-center gap-1">
+                <img src="/bark-icon.png" alt="Bark" className="h-3 w-3 rounded-full flex-shrink-0" />
+                <span className="text-[9px] font-semibold text-text whitespace-nowrap">Rated 5.0</span>
+              </div>
+              <span className="text-[7px] leading-tight text-text-light whitespace-nowrap">Based on 12 Reviews</span>
             </a>
 
             {/* Mobile Menu Button */}
