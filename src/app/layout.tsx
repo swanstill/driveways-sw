@@ -60,7 +60,7 @@ export default function RootLayout({
     name: "Driveways South West",
     image: "/images/Driveways-Southwest-Logo.png",
     url: "https://driveways-sw.co.uk",
-    telephone: "+447932339271",
+    telephone: "+441452405416",
     description:
       "Professional driveway, patio, path and fencing services in Midlands and South West England.",
     address: {

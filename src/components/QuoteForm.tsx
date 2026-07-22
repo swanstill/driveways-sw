@@ -160,8 +160,8 @@ export default function QuoteForm() {
             </p>
             <p className="mt-2 text-sm text-text-light">
               Prefer to talk now?{" "}
-              <a href="tel:+447932339271" className="font-semibold text-primary underline">
-                Call 07932 339 271
+              <a href="tel:+441452405416" className="font-semibold text-primary underline">
+                Call 01452 405416
               </a>
             </p>
           </div>
@@ -457,7 +457,7 @@ export default function QuoteForm() {
                     </span>
                     <input
                       type="tel"
-                      placeholder="7932 339 271"
+                      placeholder="1452 405416"
                       value={formData.phone}
                       onChange={(e) => update("phone", e.target.value)}
                       onKeyDown={handleKeyDown}

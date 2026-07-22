@@ -118,8 +118,8 @@ export default function Areas() {
 
         <p className="text-center mt-10 text-sm text-text-light">
           Don&apos;t see your area?{" "}
-          <a href="tel:+447932339271" className="font-semibold text-primary hover:text-primary-dark underline">
-            Call us on 07932 339 271
+          <a href="tel:+441452405416" className="font-semibold text-primary hover:text-primary-dark underline">
+            Call us on 01452 405416
           </a>{" "}
           to check availability.
         </p>
